@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@function pxToRem($px){
+  @return ($px / 750*750)/75 * 1rem;
+}
+
+$iconPath:'../icons/';
+$headerHeight:pxToRem(45); //头部高
+$bodyHeight:pxToRem(1800); //头部高
+$footerHeight:pxToRem(45);//底部高
+
+@import 'mixin';
+
+@import 'base';
+
+@import 'global';
+@import 'include/header.scss';
+@import 'include/footer.scss';
+@import 'include/index.scss';
+
+@import 'include/alubm.scss';
+
+@import 'include/Message_index.scss';

@@ -1,0 +1,75 @@
+@charset 'UTF-8';
+.AlubmPage {
+    width: 100%;
+    .over {
+      height: pxToRem(710);
+      display: block;
+      overflow: scroll;
+    }
+    .title {
+      height: pxToRem(40);;
+      padding-bottom: pxToRem(20);
+      a {
+        font-size: pxToRem(30);
+        color: #d34ba8;
+        position: absolute;
+        top: 0;
+        left: pxToRem(10);
+      }
+      h4 {
+        display: inline-block;
+        margin: pxToRem(10) pxToRem(80);
+      }
+    }
+    .lists {
+      box-sizing: border-box;
+    }
+    .goods_list {
+      height: pxToRem(190);
+      margin-top:  pxToRem(20);
+      margin-left: 10px;
+    }
+    .imgList {
+      border: 1px solid #f2f2f2;
+      width: 100%;
+      height: 70%;
+      margin: 0 auto;
+      vertical-align: middle;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .lazy-left {
+      font-size: 12px;
+      color: #000;
+      text-align: left;
+      padding: 7px;
+      height: 40px;
+      overflow: hidden;
+    }
+    .lazy-bottom {
+      text-align: left;
+      margin-top:  pxToRem(-20);
+      position: relative;
+      padding: 7px;
+      h4 {
+        color: #d34ba8;
+        font-size: 16px;
+      }
+      span {
+        text-decoration: line-through;
+        font-size: pxToRem(10);
+        color: #adadad;
+      }
+      div {
+        float: right;
+        background: #000;
+        color: white;
+        padding: 1px 2px 1px 2px;
+        font-size: pxToRem(10);
+        width: pxToRem(30);
+        text-align: center;
+      }
+    }
+  }

@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+.Message_index {
+  // height: pxToRem(690);
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .content {
+    height: pxToRem(712.5);
+    display: block;
+    overflow: scroll;
+
+    .font {
+      font-size: pxToRem(20);
+    }
+
+    .index_content {
+      div {
+        .van-collapse-item__content {
+          font-size: pxToRem(19);
+        }
+      }
+    }
+  }
+
+
+}

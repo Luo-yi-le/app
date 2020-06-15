@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+.Index_Page {
+    width: 100%;
+
+    .content {
+        height: pxToRem(712.5);
+        display: block;
+        overflow: hidden;
+
+        .van-grid {
+            overflow-y: scroll;
+            height: 100%;
+        }
+    }
+}

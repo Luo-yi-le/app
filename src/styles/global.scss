@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+
+.icon-index{
+    background-image: url($iconPath + "index.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-message{
+    background-image: url($iconPath + "message.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-service{
+    background-image: url($iconPath + "service.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-personal{
+    background-image: url($iconPath + "personal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-album{
+    background-image: url($iconPath + "album.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-wallet{
+    background-image: url($iconPath + "wallet.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app{
+    .page{
+        overflow: hidden;
+    }
+}
