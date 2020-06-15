@@ -4,13 +4,13 @@ import { Toast } from 'vant';
 
 // 环境的切换
 if (process.env.NODE_ENV == 'development') {
-    axios.defaults.baseURL = 'http://172.31.19.180:3000/';
+    axios.defaults.baseURL = 'http://localhost:3000/';
 }
 else if (process.env.NODE_ENV == 'debug') {
-    axios.defaults.baseURL = 'https://www.ceshi.com';
+    axios.defaults.baseURL = 'http://localhost:3000/';
 }
 else if (process.env.NODE_ENV == 'production') {
-    axios.defaults.baseURL = 'https://www.production.com';
+    axios.defaults.baseURL = 'http://localhost:3000/';
 }
 
 /** 

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "pro": "vue-cli-service serve --mode pro",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "sass": "sass src/assets/css/style.scss:src/assets/css/style.css"
