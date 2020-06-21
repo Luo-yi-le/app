@@ -1,16 +1,17 @@
 import axios from 'axios'; // 引入axios
 import QS from 'qs'; // 引入qs模块，用来序列化post类型的数据，后面会提到
 import { Toast } from 'vant';
+import http from './http.config'
 
 // 环境的切换
 if (process.env.NODE_ENV == 'development') {
-    axios.defaults.baseURL = 'http://localhost:3000/';
+    axios.defaults.baseURL = http.url;
 }
 else if (process.env.NODE_ENV == 'debug') {
-    axios.defaults.baseURL = 'http://localhost:3000/';
+    axios.defaults.baseURL = http.url;
 }
 else if (process.env.NODE_ENV == 'production') {
-    axios.defaults.baseURL = 'http://111.231.7.27:3000/';
+    axios.defaults.baseURL = http.url;
 }
 
 /** 
@@ -85,7 +86,7 @@ instance.interceptors.response.use(
               // 返回 401 清除token信息并跳转到登录页面
               localStorage.removeItem('token')
               this.$router.replace({
-                path: 'login',
+                path: '/login',
                 query: { redirect: this.$router.currentRoute.fullPath }
               })
           }
