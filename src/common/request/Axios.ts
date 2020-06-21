@@ -1,16 +1,17 @@
 import axios from 'axios'; // 引入axios
 import QS from 'qs'; // 引入qs模块，用来序列化post类型的数据，后面会提到
 import { Toast } from 'vant';
+import http from './http.config'
 
 // 环境的切换
 if (process.env.NODE_ENV == 'development') {
-    axios.defaults.baseURL = 'http://localhost:3000/';
+    axios.defaults.baseURL = http.url;
 }
 else if (process.env.NODE_ENV == 'debug') {
-    axios.defaults.baseURL = 'http://localhost:3000/';
+    axios.defaults.baseURL = http.url;
 }
 else if (process.env.NODE_ENV == 'production') {
-    axios.defaults.baseURL = 'http://localhost:3000/';
+    axios.defaults.baseURL = http.url;
 }
 
 /** 
