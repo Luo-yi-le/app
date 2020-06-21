@@ -1,7 +1,9 @@
 var path = require('path');
+var cf = require('./src/config/vue.config.ts');
+
 module.exports = {
     devServer: {
-        host: '0.0.0.0',
+        host: cf.url,
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 8091,

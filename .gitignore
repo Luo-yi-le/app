@@ -23,4 +23,4 @@ yarn-error.log*
 
 /*.bat
 
-/src/common/request/http.config.ts
+/src/config/*.config.ts

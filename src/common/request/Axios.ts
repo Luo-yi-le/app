@@ -1,7 +1,7 @@
 import axios from 'axios'; // 引入axios
 import QS from 'qs'; // 引入qs模块，用来序列化post类型的数据，后面会提到
 import { Toast } from 'vant';
-import http from './http.config'
+import http from '../../config/http.config';
 
 // 环境的切换
 if (process.env.NODE_ENV == 'development') {
