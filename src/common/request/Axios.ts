@@ -10,7 +10,7 @@ else if (process.env.NODE_ENV == 'debug') {
     axios.defaults.baseURL = 'http://localhost:3000/';
 }
 else if (process.env.NODE_ENV == 'production') {
-    axios.defaults.baseURL = 'http://localhost:3000/';
+    axios.defaults.baseURL = 'http://111.231.7.27:3000/';
 }
 
 /** 
@@ -44,11 +44,12 @@ instance.interceptors.request.use(
         if (config.method === 'POST') {
             config.data = QS.stringify(config.data)
         }
-        // let token = store.state.token;
-        // if (token) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
-        //     config.headers.Authorization = token;
-        //     console.log('interceptors config=',config)
-        // }
+        let token = this.$store.state.token;
+        console.log(token)
+        if (token) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
+            config.headers.Authorization = token;
+            console.log('interceptors config=',config)
+        }
         // 若是有做鉴权token , 就给头部带上token
         if (window.localStorage.getItem('token')) {
             config.headers.Authorization = window.localStorage.getItem('token')
@@ -64,31 +65,31 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
     response => {
         // token 过期或者其他情况的判断
-        // if (response.data.code === -1) {
-        //   localStorage.removeItem('token')
-        //   router.replace({
-        //     path: 'login',
-        //     query: { redirect: router.currentRoute.fullPath }
-        //   })
-        // }else{
-        //   return response
-        // }
+        if (response.data.code === -1) {
+          localStorage.removeItem('token')
+          this.$router.replace({
+            path: '/login',
+            query: { redirect: this.$router.currentRoute.fullPath }
+          })
+        }else{
+          return response
+        }
 
         // 返回响应时做一些处理，我们这里直接返回
         return response
     },
     error => {
-        // if (error.response) {
-        //   switch (error.response.status) {
-        //     case 401:
-        //       // 返回 401 清除token信息并跳转到登录页面
-        //       localStorage.removeItem('token')
-        //       router.replace({
-        //         path: 'login',
-        //         query: { redirect: router.currentRoute.fullPath }
-        //       })
-        //   }
-        // }
+        if (error.response) {
+          switch (error.response.status) {
+            case 401:
+              // 返回 401 清除token信息并跳转到登录页面
+              localStorage.removeItem('token')
+              this.$router.replace({
+                path: 'login',
+                query: { redirect: this.$router.currentRoute.fullPath }
+              })
+          }
+        }
         // 当响应异常时做一些处理
         return Promise.reject(error)
     }

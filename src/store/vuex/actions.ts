@@ -21,6 +21,20 @@ const actions: ActionTree<RootStateTypes,any> = {
     },
     set_author:({ commit , state: RootStateTypes}: any, d: any) => {
         commit(types.SET_AUTHOR, d);
+    },
+
+    /**
+     * 设置token
+     */
+    set_token:({ commit , state: RootStateTypes}: any, d: any)=>{
+        commit(types.SET_TOKEN, d);
+    }
+    ,
+    /**
+     * 设置用户信息
+     */
+    set_userInfo:({ commit , state: RootStateTypes}: any, d: any)=>{
+        commit(types.SET_USERINFO, d);
     }
 };
 

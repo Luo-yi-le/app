@@ -33,14 +33,14 @@ module Api{
          */
         static basic_login(data:any){
             var deferred=Q.defer();
-            let basic_login=post('photo/json/data.json', ParanUnit(data));       
+            let basic_login=get(URL.userLogin, ParanUnit(data));       
             return basic_login;
         };
     };
 
     export class Alubm{
         static getAlubm(data:any){
-            let dataList=get(URL.getAlubm,ParanUnit(data));
+            let dataList=post(URL.getAlubm,ParanUnit(data));
             return dataList;
         };
     }

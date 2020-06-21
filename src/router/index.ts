@@ -74,13 +74,13 @@ const routes: Array<RouteConfig> = [
         component: () => import(/* webpackChunkName: "about" */ '../views/test/test1.vue')
       }
     ]
-  }
+  },
 
-  // {
-  //   path: '/',
-  //   name: 'Alubm',
-  //   component: Alubm
-  // }
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Login/Login.vue'),
+  }
 
   // , {
   //   path: '/alubm',

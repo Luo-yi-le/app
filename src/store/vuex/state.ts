@@ -9,13 +9,13 @@ import { RootStateTypes } from '@/types/vuexTypes';
 //     menuActive:null
 //   };
 const state: RootStateTypes = {
-  author: '陈小生',
+  author: 'lonley',
   token: null,
   userInfo: null,
   wxInfo: null,
   indexNav: index_nav,
   menuActive: null,
-  alubmTitle:"默认标题头"
+  alubmTitle:"默认标题头",
 };
 
 export default state;
