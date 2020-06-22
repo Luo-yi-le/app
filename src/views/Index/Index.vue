@@ -57,7 +57,7 @@ export default class Index extends Vue {
 
   onclick(path:string,status:number) {
     let tip: TipsInfo = {
-      message: "暂未开放",
+      message: "对不起，您账号无权限",
       type: "fail",
       forbidClick: true,
       duration: 1000

@@ -28,7 +28,7 @@ export default class Page extends Vue {
     super();
   }
   created() {
-    // this.getIP();
+    this.getRule();
     // console.log(this.alubmTitle);
     //   if (sessionStorage.getItem("store")) {
     //     this.$store.replaceState(
@@ -47,6 +47,17 @@ export default class Page extends Vue {
   getIP(){
     let __this = this;
     Api.Ip.ip(true).then(res=>{
+    })
+  };
+
+  getRule(){
+    let __this = this;
+    let p={
+      token:__this.$store.state.token,
+      email:"2318927272@qq.com",
+      name:__this.$store.state.author,
+    }
+    Api.Rule.rule(p).then(res=>{
     })
   }
 }

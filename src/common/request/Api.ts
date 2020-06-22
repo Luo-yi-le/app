@@ -64,5 +64,12 @@ module Api{
             return dataList;
         } 
     }
+
+    export class Rule{
+        static rule(data:any){
+            let dataList=get(URL.rule,ParanUnit(data));
+            return dataList;
+        } 
+    }
 }
 export default Api;

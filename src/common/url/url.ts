@@ -7,6 +7,8 @@ class URL {
 
     static userLogin="/account/userLogin";
 
+    static rule="/account/rule";
+
     static ip="/ip";
 }
 export default URL;
