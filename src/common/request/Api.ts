@@ -57,5 +57,12 @@ module Api{
             return dataList;
         } 
     }
+
+    export class Ip{
+        static ip(data:any){
+            let dataList=get(URL.ip,ParanUnit(data));
+            return dataList;
+        } 
+    }
 }
 export default Api;

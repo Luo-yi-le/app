@@ -15,7 +15,7 @@
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import { State, Getter, Action, Mutation, namespace } from "vuex-class";
 import VFooter from "@/components/footer/footer.vue";
-
+import Api from "@/common/request/Api.ts";
 @Component({
   components: {
     "v-footer": VFooter
@@ -28,6 +28,7 @@ export default class Page extends Vue {
     super();
   }
   created() {
+    this.getIP();
     // console.log(this.alubmTitle);
     //   if (sessionStorage.getItem("store")) {
     //     this.$store.replaceState(
@@ -42,6 +43,11 @@ export default class Page extends Vue {
     //   window.addEventListener("beforeunload", () => {
     //     sessionStorage.setItem("store", JSON.stringify(this.$store.state));
     //   });
+  }
+  getIP(){
+    let __this = this;
+    Api.Ip.ip(true).then(res=>{
+    })
   }
 }
 </script>

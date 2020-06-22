@@ -6,5 +6,7 @@ class URL {
     static getMenu="/mune/selectMenuAll";
 
     static userLogin="/account/userLogin";
+
+    static ip="/ip";
 }
 export default URL;
