@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
-import router from './router'
+import router from './router/index'
 import store from './store'
 import Vant from 'vant';
 // 封装的插件

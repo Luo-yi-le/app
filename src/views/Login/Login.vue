@@ -67,7 +67,9 @@ export default class Login extends Vue {
   needBoard: boolean = false;
   userInfo = {
     email: "2318927272@qq.com",
-    pwd: "admin"
+    pwd: "admin",
+    page:"/Login",
+    msg:"登陆"
   };
 
   mounted() {

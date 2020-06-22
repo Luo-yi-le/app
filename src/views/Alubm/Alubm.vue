@@ -146,12 +146,15 @@ export default class Alubm extends Vue {
   //     });
   // }
   getAlubm() {
-    
     let that = this;
-    console.log(that.$store.state.token )
-    let token=that.$store.state.token 
+    let token=that.$store.state.token;
+    let params={
+      page:"/page/index",
+      msg:"相册",
+      token:token
+    }
     Api.Alubm
-      .getAlubm({ token:token})
+      .getAlubm(params)
       .then((res: any) => {
         that.graduationPhoto = res.data.graduationPhoto;
         that.titleContent = res.data.graduationPhoto.content;

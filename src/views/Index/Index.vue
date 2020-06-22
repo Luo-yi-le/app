@@ -76,7 +76,11 @@ export default class Index extends Vue {
 
   getMune() {
     let __this = this;
-    Api.Mune.selectMuneAll(true).then((res:ResultInfo)=>{
+    let params={
+      page:"/page/index",
+      msg:"首页"
+    }
+    Api.Mune.selectMuneAll(params).then((res:ResultInfo)=>{
       if(res.code==200){
         console.log(res)
         __this.manu=res.data;

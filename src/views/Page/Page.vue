@@ -28,7 +28,7 @@ export default class Page extends Vue {
     super();
   }
   created() {
-    this.getIP();
+    // this.getIP();
     // console.log(this.alubmTitle);
     //   if (sessionStorage.getItem("store")) {
     //     this.$store.replaceState(

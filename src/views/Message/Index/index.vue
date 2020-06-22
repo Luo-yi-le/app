@@ -54,8 +54,12 @@ export default class index extends Vue {
   }
 
   getMessage() {
+    let params={
+      page:"/message/index",
+      msg:"留言"
+    }
     let __this = this;
-    Api.Message.selectMessageAll(true).then((res: ResultInfo) => {
+    Api.Message.selectMessageAll(params).then((res: ResultInfo) => {
       if (res.code == 200) {
         __this.dataList = res.data;
       }
