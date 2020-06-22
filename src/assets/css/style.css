@@ -171,7 +171,7 @@ a {
   width: 100%;
 }
 .Index_Page .content {
-  height: 9.5rem;
+  height: 20rem;
   display: block;
   overflow: hidden;
 }
@@ -184,7 +184,7 @@ a {
   width: 100%;
 }
 .AlubmPage .over {
-  height: 9.4666666667rem;
+  height: 20rem;
   display: block;
   overflow: scroll;
 }
@@ -260,7 +260,7 @@ a {
   overflow-x: hidden;
 }
 .Message_index .content {
-  height: 9.5rem;
+  height: 20rem;
   display: block;
   overflow: scroll;
 }
